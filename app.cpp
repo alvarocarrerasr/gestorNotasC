@@ -27,8 +27,8 @@ int loadDatabase(vector<note> * notes) {
     ifstream file;
     file.open(database);
     if (!file.is_open()) {
-        /*Base de datos no existe*/
-        return -1;
+        /*Base de datos no existe, ya se creará*/
+        return 0;
     }
     string nota[2];
     int pos=0;
